@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Unbounded", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+.bg-1{
+    background: radial-gradient(498.32% 130.33% at 92.87% 11.25%, #33A9FF 0%, #33FFF3 100%);
+}
+
+.bg-2{
+    background: radial-gradient(333.17% 80.94% at 51.32% 69.21%, #3DA0FC 0%, rgba(2, 227, 214, .2) 100%);
+}
