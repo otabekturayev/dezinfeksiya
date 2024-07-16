@@ -80,7 +80,7 @@ const MessageInfo: React.FC = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="max-w-[456px] h-[385px] bg-[#fff] rounded-[8px] p-[20px]"
       >
-        <h6 className="text-[#242825] font-[700] text-[32px]">
+        <h6 className="text-[#242825] font-[700] text-[22px] xs:text-[32px]">
           {t("bg3.title")}
         </h6>
         <div className="relative">
