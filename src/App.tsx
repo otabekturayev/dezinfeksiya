@@ -275,7 +275,7 @@ function App() {
             </div>
           </section>
           <section className="container mx-auto">
-            <h3 className="w-[100%] mb-[40px] text-[#020c31] text-[40px] sm:text-[52px] font-[700] ">
+            <h3 className="w-[100%] mb-[40px] text-[#020c31] text-[30px] sm:text-[52px] font-[700] ">
               {t("xizmat_turi.title0")}
             </h3>
             <div className="flex flex-wrap gap-[15px]">
