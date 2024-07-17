@@ -172,20 +172,20 @@ function App() {
           >
             <div>
               <h4
-                data-aos="fade-left"
+                data-aos="fade-right"
                 className="max-w-[558px] text-[#fafafa] sm:text-[40px] font-[700] mb-[20px] text-[30px]"
               >
                 {t("bg1.title")}
               </h4>
               <p
-                data-aos="fade-left"
+                data-aos="fade-right"
                 className="max-w-[310px] text-[#fff] mb-[60px]"
               >
                 {t("bg1.text")}
               </p>
               <a href="#message">
                 <Button
-                  data-aos="fade-left"
+                  data-aos="fade-right"
                   variant="contained"
                   sx={{
                     width: "200px",

@@ -24,8 +24,20 @@ const MessageInfo: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<FormValues>();
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const [open, setOpen] = React.useState<boolean>(false);
+  const isHandleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    console.log(event);
+    setOpen(false);
+  };
   const handleClose = (
     event?: React.SyntheticEvent | Event,
     reason?: string
@@ -34,8 +46,6 @@ const MessageInfo: React.FC = () => {
       return;
     }
     console.log(event);
-    
-
     setOpen(false);
   };
   const { t } = useTranslation();
@@ -54,11 +64,13 @@ const MessageInfo: React.FC = () => {
     })
       .then((res) => {
         console.log(res);
-        setOpen(true);
+        setIsOpen(true);
       })
       .catch((error) => {
+        setOpen(true)
         console.log(error);
       });
+      reset()
   };
   return (
     <section
@@ -66,7 +78,7 @@ const MessageInfo: React.FC = () => {
       className="container mx-auto mb-[100px] bg-2 flex justify-center sm:justify-evenly items-center rounded-[12px] px-[24px] h-[550px]"
     >
       <div>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar open={isOpen} autoHideDuration={3000} onClose={isHandleClose}>
           <Alert
             onClose={handleClose}
             severity="success"
@@ -75,6 +87,16 @@ const MessageInfo: React.FC = () => {
           >
             This is a success!
           </Alert>
+        </Snackbar>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="error"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          Error
+        </Alert>
         </Snackbar>
       </div>
       <form
