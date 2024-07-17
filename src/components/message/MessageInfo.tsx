@@ -36,7 +36,7 @@ const MessageInfo: React.FC = () => {
       return;
     }
     console.log(event);
-    setOpen(false);
+    setIsOpen(false);
   };
   const handleClose = (
     event?: React.SyntheticEvent | Event,
