@@ -24,39 +24,40 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect, useState } from "react";
 
-
 function App() {
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-                      
+
   const getStyles = () => {
     if (windowWidth < 490) {
       return {
         button: {
-          maxWidth: '125px',
-          fontSize: '16px',
-          height: '50x',
+          maxWidth: "125px",
+          fontSize: "16px",
+          height: "50x",
           borderRadius: "25px",
-          background: "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
+          background:
+            "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
           fontWeight: "500",
           position: "absolute",
           bottom: "20px",
-        }
+        },
       };
     } else {
       return {
         button: {
-          maxWidth: '190px',
-          fontSize: '22px',
-          height: '50x',
+          maxWidth: "190px",
+          fontSize: "22px",
+          height: "50x",
           borderRadius: "25px",
-          background: "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
+          background:
+            "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
           fontWeight: "500",
           position: "absolute",
           bottom: "20px",
@@ -78,47 +79,42 @@ function App() {
       <div>
         <Header></Header>
         <main className="px-7">
-          <section
-            id="main"
-            className="flex justify-between gap-5 container mx-auto items-center mt-[70px]"
-          >
-            <div className="bg-hero-photo rounded-[20px] bg-no-repeat p-4 w-[100%] bg-cover md:bg-none">
-              <h1
-                data-aos="fade-right"
-                className="max-w-[650px] text-[30px] xs:text-[45px] text-[#fff] font-[500] mb-[50px] md:text-[#093fb3] ss:text-[60px] md:text-[70px]"
-              >
-                {t("asosiy.title")}
-              </h1>
-              <p
-                data-aos="fade-right"
-                className="max-w-[400px] text-[15px] xs:text-[18px] ss:text-[20px]  text-[#ffffe8] font-[500] mb-[20px] md:text-[#272121] md:mb-[80px]"
-              >
-                {t("asosiy.text")}
-              </p>
-              <a href="#message">
-                <Button
+          <section id="main" className="container mx-auto ">
+            <div className="flex justify-between gap-5 items-center mt-[70px]">
+              <div className="bg-hero-photo rounded-[20px] bg-no-repeat p-4 w-[100%] max-w-[650px] bg-cover md:bg-none">
+                <h1
                   data-aos="fade-right"
-                  variant="contained"
-                  sx={{
-                    width: "200px",
-                    height: "60px",
-                    borderRadius: "25px",
-                    background:
-                      "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
-                    fontSize: "20px",
-                    fontWeight: "500",
-                  }}
+                  className="max-w-[650px] text-[30px] xs:text-[45px] text-[#fff] font-[500] mb-[50px] md:text-[#093fb3] ss:text-[60px] md:text-[70px]"
                 >
-                  {t("boglanish")}
-                </Button>
-              </a>
-            </div>
-            <div className="hidden md:block">
-            <img
-                className="h-[700px] w-[1000px]  rounded-[8px]"
-                src={heroPhoto}
-                alt="photo"
-              />
+                  {t("asosiy.title")}
+                </h1>
+                <p
+                  data-aos="fade-right"
+                  className="max-w-[400px] text-[15px] xs:text-[18px] ss:text-[20px]  text-[#ffffe8] font-[500] mb-[20px] md:text-[#272121] md:mb-[80px]"
+                >
+                  {t("asosiy.text")}
+                </p>
+                <a href="#message">
+                  <Button
+                    data-aos="fade-right"
+                    variant="contained"
+                    sx={{
+                      width: "200px",
+                      height: "60px",
+                      borderRadius: "25px",
+                      background:
+                        "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
+                      fontSize: "20px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {t("boglanish")}
+                  </Button>
+                </a>
+              </div>
+              <div className="hidden md:block h-[700px] w-[750]">
+                <img className="w-[100%] h-[100%] object-cover  rounded-[8px]" src={heroPhoto} alt="photo" />
+              </div>
             </div>
           </section>
           <section
@@ -130,7 +126,7 @@ function App() {
             </h3>
             <div
               data-aos="fade-right"
-              className="flex flex-wrap justify-between gap-y-5 py-[30px] "
+              className="flex flex-wrap justify-center gap-y-5 gap-x-10 py-[30px] "
             >
               <div className="border-[2px] border-[#cccccc93] rounded-[15px] p-[14px] w-full  md:max-w-[400px] md:h-[350px]">
                 <div className="mb-[20px]">
@@ -217,7 +213,7 @@ function App() {
                 >
                   <div>
                     <img
-                      className="w-[300px] h-[300px]"
+                      className="ss:w-[300px] ss:h-[300px] w-[200px] h-[200px]"
                       src={dezinfeksiya1}
                       alt="photo"
                     />
@@ -237,7 +233,7 @@ function App() {
                 >
                   <div>
                     <img
-                      className="w-[300px] h-[300px]"
+                      className="ss:w-[300px] ss:h-[300px] w-[200px] h-[200px]"
                       src={dezinfeksiya2}
                       alt="photo"
                     />
@@ -257,7 +253,7 @@ function App() {
                 >
                   <div>
                     <img
-                      className="w-[300px] h-[300px]"
+                      className="ss:w-[300px] ss:h-[300px] w-[200px] h-[200px]"
                       src={dezinfeksiya3}
                       alt="photo"
                     />
@@ -292,10 +288,7 @@ function App() {
                   </p>
                 </div>
                 <a href="#message">
-                  <Button
-                    variant="contained"
-                    sx={styles.button}
-                  >
+                  <Button variant="contained" sx={styles.button}>
                     {t("boglanish")}
                   </Button>
                 </a>
@@ -318,10 +311,7 @@ function App() {
                   </p>
                 </div>
                 <a href="#message">
-                  <Button
-                    variant="contained"
-                    sx={styles.button}
-                  >
+                  <Button variant="contained" sx={styles.button}>
                     {t("boglanish")}
                   </Button>
                 </a>
@@ -344,10 +334,7 @@ function App() {
                   </p>
                 </div>
                 <a href="#message">
-                  <Button
-                    variant="contained"
-                    sx={styles.button}
-                  >
+                  <Button variant="contained" sx={styles.button}>
                     {t("boglanish")}
                   </Button>
                 </a>
@@ -370,10 +357,7 @@ function App() {
                   </p>
                 </div>
                 <a href="#message">
-                  <Button
-                    variant="contained"
-                    sx={styles.button}
-                  >
+                  <Button variant="contained" sx={styles.button}>
                     {t("boglanish")}
                   </Button>
                 </a>
@@ -396,10 +380,7 @@ function App() {
                   </p>
                 </div>
                 <a href="#message">
-                  <Button
-                    variant="contained"
-                    sx={styles.button}
-                  >
+                  <Button variant="contained" sx={styles.button}>
                     {t("boglanish")}
                   </Button>
                 </a>
@@ -429,21 +410,22 @@ function App() {
               >
                 {t("bg2.title")}
               </h4>
-              <a  href="#message">
-              <Button data-aos="fade-right"
-                variant="contained"
-                sx={{
-                  width: "200px",
+              <a href="#message">
+                <Button
+                  data-aos="fade-right"
+                  variant="contained"
+                  sx={{
+                    width: "200px",
                     height: "60px",
                     borderRadius: "25px",
                     background:
                       "linear-gradient(0deg, rgb(37, 33, 251) 0%, rgb(59, 105, 230) 100%)",
                     fontSize: "20px",
                     fontWeight: "500",
-                }}
-              >
-                {t("boglanish")}
-              </Button>
+                  }}
+                >
+                  {t("boglanish")}
+                </Button>
               </a>
             </div>
           </section>

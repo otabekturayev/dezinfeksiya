@@ -80,16 +80,16 @@ const Header = () => {
         <div className=" items-center gap-[40px] hidden sm:flex">
           <nav>
             <ul className="flex sm:items-center gap-[25px] ">
-              <li className="text-[#666] text-[20px] cursor-pointer">
+              <li className="text-[#666] text-[20px] cursor-pointer hover:text-[#161616]">
                 <a href="#main">{t("header.asosiy")}</a>
               </li>
-              <li className="text-[#666] text-[20px] cursor-pointer">
+              <li className="text-[#666] text-[20px] cursor-pointer hover:text-[#161616]">
                 <a href="#about">{t("header.biz_aqimizda")}</a>
               </li>
-              <li className="text-[#666] text-[20px] cursor-pointer">
+              <li className="text-[#666] text-[20px] cursor-pointer hover:text-[#161616]">
                 <a href="#service">{t("header.xizmatlar")}</a>
               </li>
-              <li className="text-[#666] text-[20px] cursor-pointer">
+              <li className="text-[#666] text-[20px] cursor-pointer hover:text-[#161616]">
                 <a href="#faq">{t("header.faq")}</a>
               </li>
               <li className="">
