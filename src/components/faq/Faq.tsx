@@ -15,7 +15,7 @@ const Faq = () => {
     setExpanded((prevExpanded) => !prevExpanded);
   };
   return (
-    <section id='faq' className="container gap-6 pb-[70px] mx-auto border-t mt-[120px] pt-[40px] border-[#cccc] flex justify-between md:flex-row flex-col ">
+    <section id='faq' className="container gap-6 pb-[70px] mx-auto border-t mt-8 xs:mt-[120px] pt-[40px] border-[#cccc] flex justify-between md:flex-row flex-col ">
       <div>
         <h3 className="w-[100%] md:mb-[40px] text-[#020c31] text-[38px] xs:text-[48px] font-[700] ">
           {t("header.faq")}

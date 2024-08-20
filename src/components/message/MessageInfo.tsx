@@ -75,7 +75,7 @@ const MessageInfo: React.FC = () => {
   return (
     <section
       id="message"
-      className="container mx-auto mb-[100px] bg-2 flex justify-center sm:justify-evenly items-center rounded-[12px] px-[24px] h-[550px]"
+      className="container mx-auto mb-8 xs:mb-[100px] bg-2 flex justify-center sm:justify-evenly items-center rounded-[12px] px-[24px] h-[550px]"
     >
       <div>
         <Snackbar open={isOpen} autoHideDuration={3000} onClose={isHandleClose}>

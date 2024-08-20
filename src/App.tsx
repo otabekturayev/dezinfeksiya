@@ -80,8 +80,8 @@ function App() {
         <Header></Header>
         <main className="px-7">
           <section id="main" className="container mx-auto ">
-            <div className="flex justify-between gap-5 items-center mt-[70px]">
-              <div className="bg-hero-photo rounded-[20px] bg-no-repeat p-4 w-[100%] max-w-[650px] bg-cover md:bg-none">
+            <div className="flex justify-between gap-1 items-center w-[100%] mt-4 xs:mt-[70px]">
+              <div className="bg-hero-photo rounded-[20px] bg-no-repeat w-[100%] p-4 bg-cover md:bg-none">
                 <h1
                   data-aos="fade-right"
                   className="max-w-[650px] text-[30px] xs:text-[45px] text-[#fff] font-[500] mb-[50px] md:text-[#093fb3] ss:text-[60px] md:text-[70px]"
@@ -112,16 +112,16 @@ function App() {
                   </Button>
                 </a>
               </div>
-              <div className="hidden md:block h-[700px] w-[750]">
+              <div className="hidden md:block h-[700px] w-[750px]">
                 <img className="w-[100%] h-[100%] object-cover  rounded-[8px]" src={heroPhoto} alt="photo" />
               </div>
             </div>
           </section>
           <section
             id="about"
-            className="container mx-auto mt-[100px] py-[50px]"
+            className="container mx-auto mt-0 sm:mt-[100px] py-[30px] xs:py-[50px]"
           >
-            <h3 className="w-[100%] text-[#020c31] pb-[30px] text-[30px] font-[700] border-b border-[#020c3154]">
+            <h3 className="w-[100%] text-[#020c31] xs:pb-[30px] pb-2 text-[30px] font-[700] border-b border-[#020c3154]">
               {t("bizHaqimizda.title")}
             </h3>
             <div
@@ -164,7 +164,7 @@ function App() {
             </div>
           </section>
           <section
-            className={`container pl-[20px] sm:pl-[80px] mb-[60px] mx-auto bg-custom-gradient bg-cover rounded-[20px] w-[100%] h-[600px] flex items-center bg-no-repeat`}
+            className={`container pl-[20px] sm:pl-[80px] mb-0 sm:mb-[60px] mx-auto bg-custom-gradient bg-cover rounded-[20px] w-[100%] h-[600px] flex items-center bg-no-repeat`}
           >
             <div>
               <h4
@@ -198,7 +198,7 @@ function App() {
               </a>
             </div>
           </section>
-          <section id="service" className="container mx-auto py-[70px]">
+          <section id="service" className="container mx-auto py-5 xs:py-[70px]">
             <div>
               <h3 className="w-[100%] mb-[15px] text-[#020c31] text-[40px] sm:text-[52px] font-[700] ">
                 {t("header.xizmatlar")}
@@ -271,7 +271,7 @@ function App() {
             </div>
           </section>
           <section className="container mx-auto">
-            <h3 className="w-[100%] mb-[40px] text-[#020c31] text-[30px] sm:text-[52px] font-[700] ">
+            <h3 className="w-[100%] mb-5 xs:mb-[40px] text-[#020c31] text-[30px] sm:text-[52px] font-[700] ">
               {t("xizmat_turi.title0")}
             </h3>
             <div className="flex flex-wrap gap-[15px]">
@@ -392,7 +392,7 @@ function App() {
               </div>
             </div>
           </section>
-          <section className="bg-1 flex gap-[20px] sm:justify-around w-[100%] mt-[130px] min-h-[585px] container mx-auto bg-[#33A9FF] px-5 rounded-[16px] items-center">
+          <section className="bg-1 flex gap-[20px] sm:justify-around w-[100%] mt-8 xs:mt-[130px] min-h-[585px] container mx-auto bg-[#33A9FF] px-5 rounded-[16px] items-center">
             <div data-aos="fade-right">
               <img
                 className="rounded-[20px] sm:block hidden"
